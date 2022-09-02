@@ -1,0 +1,98 @@
+<!-- JS- koo HTML kai saat -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+
+
+  <style>
+    .box {
+      width: 50vh;
+      height: 50vh;
+      background-color: cadetblue;
+    }
+
+    .largeBox {
+      width: 100vh;
+      height: 50vh;
+      background-color: rebeccapurple;
+    }
+
+    .border {
+      border: 7px solid black;
+      width: 50%;
+    }
+
+    .rectangle {
+      width: 30vw;
+      height: 40vh;
+      background-color: lightcoral;
+    }
+
+    .sequare {
+      width: 200px;
+      height: 200px;
+      background-color: goldenrod;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: lightgreen;
+      border-radius: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" onclick="abc('Click me')">Clck Here</a>
+  <button onclick="abc('Button Clckes')">Click</button>
+
+
+  <img
+    src="https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg"
+    onmouseover="abc('Hover on image')" onmouseout="abc('Mouse out from image')" width="300px" alt="">
+
+  <!-- onfocus (jha bhi focuse hoga)-->
+  <!-- jaab focuse haat jata hai too blur ka event call hota hai (blu us case mai user hota hai jaab ap validation di thi jesy hi user input se bhaar nikalta hai too a user inuts dekh skhty hai bhar aty hi check ker lai kai sahi likha hai ya nhi) -->
+  <input type="text" onfocus="abc('Input Focuse')" onblur="abc('on blur me')" placeholder="first name" name="">
+
+  <!-- this is a keyword ye apny parent koo represent ary ga img is a parent iss wqt jab bhi ye click hoo pura elemnt uth ke us this mai ajyn -->
+  <img
+    src="https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg"
+    width="300px" alt="" onclick="imgclick(this)">
+
+  <div class="box" onclick="this.className = 'largeBox'"></div>
+
+  <br>
+  <!--Ab box ki class bhi change naa hoo (+=) means previous wali mojud rahy or agli wali joo equals too kerwa rahy hai woo agy aa kr lag jayn jaab class change hoo rahi hai or mill rah hai pas mai classe too ek new class bn rahi hai too ap ek gap dai dain phir dono classes apply ho jayn gi-->
+
+  <div class="box" onclick="this.className += ' border'" id="box"></div>
+  <!--dote iss liya q kai ss ka matalb ap ko is kai under jana hai  -->
+
+
+  <!-- sirf e lin ki agr ap koo css likh kr uss pr kaam kerna hai jesy mujhy disply none kerna hi -->
+  <div onclick="this.style.display='none';"></div>
+
+  <!-- kisi bhi element ko target kerny kai liya  -->
+  <button onclick="closeBox()">Click and none other element</button>
+
+  <!-- Shapes -->
+  <div class="box" id="box"></div>
+  <button onclick="shape('rectangle')">Rectangle</button>
+  <button onclick="shape('circle')">Circle</button>
+  <button onclick="shape('sequare')">Sequare</button>
+
+
+
+
+
+
+  <script src="script2.js"></script>
+</body>
+
+</html>
